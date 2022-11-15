@@ -106,20 +106,8 @@ export default createGlobalStyle`
       }
     }
 
-    .statistics-container {
-      .title-section {
-        width: 100%;
   
-        h1 {
-          font-size: 28px;
-          margin-bottom: 20px;
-        }
-        p {
-          width: auto;
-        }
-      }
-  
-      .statistics-body {
+    .statistics-body {
         flex-direction: column;
         align-items: center;
   
@@ -129,18 +117,6 @@ export default createGlobalStyle`
           background: ${theme.colors.primary_cyan};
           flex: none;
           margin-top: 0px
-        }
-    
-        .card-1 {
-          flex: 1;
-        }
-        .card-2 {
-          flex: 1;
-          margin-top: 30px
-        }
-        .card-3 {
-          flex: 1;
-          margin-top: 30px
         }
       }
     }

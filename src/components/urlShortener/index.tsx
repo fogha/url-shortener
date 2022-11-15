@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import ShortenUrlCard from '../card/shortenUrlCard';
-import UrlCard from '../card/urlCard';
+import ShortenUrlCard from '../cards/shortenUrlCard';
+import UrlCard from '../cards/urlCard';
 import { LinkProps } from '../../utils/types';
 
 const StyleContainer = styled.div`
-  position: absolute;
   margin-top: -75px;
   margin-bottom: 100px;
-  width: 80%;
+  width: 100%;
 `;
 
 

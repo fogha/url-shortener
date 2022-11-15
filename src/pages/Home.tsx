@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/home.scss'
-import NavBar from '../components/navBar';
-import LandingSection from '../components/LandingSection';
 import styled from 'styled-components'
-import { UrlShortenerSection } from '../components';
+import { UrlShortenerSection, AdvancedStatistics, NavBar, LandingSection } from '../components';
 
 const HomeContainer = styled.div`
   width: 100%;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 
   .header {
     height: 100vh;  
@@ -18,8 +18,7 @@ const HomeContainer = styled.div`
     background: ${({ theme }) => theme.colors.background};
     padding: 0px 120px;
     padding-bottom: 100px;
-    position: relative;
-    height: 100vh;
+    min-height: 85vh;
   }
 
   .wrapper {
@@ -41,6 +40,7 @@ export default function Home() {
 
       <div className="main">
         <UrlShortenerSection />
+        <AdvancedStatistics />
       </div>
     </HomeContainer>
   )
