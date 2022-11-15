@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  &__linkContainer {
+    margin-left: 16px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -28,7 +28,7 @@ const StyledButton = styled.button<{
 const PrimmaryButton: FC<{
   label: string,
   onClick: () => void,
-  link: string,
+  link?: string,
   size?: 'm' | 's';
   className?: string;
   isInNav?: string;

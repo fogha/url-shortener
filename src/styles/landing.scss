@@ -1,0 +1,41 @@
+.landing {
+  display: flex;
+  align-items: center;
+  display: flex;
+  position: relative;
+  margin-bottom: 100px;
+  height: 100%;
+  margin-top: 150px;
+
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+
+  &__left {
+    width: 52%;
+    height: 100%;
+    padding-right: 50px;
+
+    h1 {
+      font-size: 4rem;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: -270px;
+    top: 0px;
+    bottom: 0px;
+
+    img {
+      height: 480px;
+      width: auto;
+    }
+  }
+}

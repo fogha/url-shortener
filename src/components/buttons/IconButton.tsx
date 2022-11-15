@@ -11,7 +11,7 @@ const StyledButton = styled.button`
     width: 40px;
     vertical-align: initial;
     path: {
-      color: ${({ theme }) => theme.colors.grayish_violet};
+      color: ${theme.colors.grayish_violet};
     }
   }
 `;

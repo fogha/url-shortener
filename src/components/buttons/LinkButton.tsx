@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 
 const StyledButton = styled.button<{
@@ -21,18 +21,18 @@ const StyledButton = styled.button<{
   :hover,
   :active {
     a {
-      color: ${({ theme, atFooter}) => atFooter ? theme.colors.primary_cyan : theme.colors.dark_blue};
+      color: ${({ theme, atFooter }) => atFooter ? theme.colors.primary_cyan : theme.colors.dark_blue};
     }
   }
 `;
 
-const FlatButton: FC<{
+const LinkButton: FC<{
   label: string,
   onClick: () => void,
   link: string,
   atFooter?: boolean,
   className?: string
-}> = ({label, onClick, link, atFooter = false, className}) => {
+}> = ({ label, onClick, link, atFooter = false, className }) => {
   return (
     <StyledButton className={className} onClick={onClick} atFooter={atFooter}>
       <a href={link}>{label}</a>
@@ -40,4 +40,4 @@ const FlatButton: FC<{
   )
 }
 
-export default FlatButton
+export default LinkButton
