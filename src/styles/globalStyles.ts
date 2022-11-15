@@ -105,7 +105,6 @@ export default createGlobalStyle`
         }
       }
     }
-
   
     .statistics-body {
         flex-direction: column;
@@ -121,24 +120,6 @@ export default createGlobalStyle`
       }
     }
 
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 50px;
-
-      .logo {
-        margin-bottom: 50px;
-      }
-      .links {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .wrappers {
-        align-items: center;
-        margin-bottom: 50px;
-      }
-    }
 
     .primary-btn-container {
       a {

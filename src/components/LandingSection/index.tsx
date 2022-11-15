@@ -5,9 +5,8 @@ const StyleContainer = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 100px;
   height: 100%;
-  margin-top: 150px;
+  margin-top: 120px;
 
   .landing__left {
     width: 50%;

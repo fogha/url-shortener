@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/home.scss'
 import styled from 'styled-components'
-import { UrlShortenerSection, AdvancedStatistics, NavBar, LandingSection } from '../components';
+import { UrlShortenerSection, AdvancedStatistics, NavBar, LandingSection, Boost, Footer } from '../components';
 
 const HomeContainer = styled.div`
   width: 100%;
@@ -10,8 +10,9 @@ const HomeContainer = styled.div`
   flex-direction: column;
 
   .header {
-    height: 100vh;  
+    min-height: 100vh;  
     padding: 0 120px;
+    margin-bottom: 160px
   }
 
   .main {
@@ -21,13 +22,13 @@ const HomeContainer = styled.div`
     min-height: 85vh;
   }
 
-  .wrapper {
-    padding: 0px 120px;
-  }
-
-  .footer-section {
+  .footer {
     padding: 0px 120px;
     background: ${({ theme }) => theme.colors.dark_violet};
+
+    @media (max-width: 768px) {
+      padding: 0 40px;
+    }
   }
 `;
 export default function Home() {
@@ -42,6 +43,11 @@ export default function Home() {
         <UrlShortenerSection />
         <AdvancedStatistics />
       </div>
+
+      <Boost />
+      <footer className="footer">
+        <Footer />
+      </footer>
     </HomeContainer>
   )
 }

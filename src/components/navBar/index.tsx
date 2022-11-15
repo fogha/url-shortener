@@ -56,7 +56,6 @@ const NavBar: FC<{
     { title: "Features", href: "#" },
     { title: "Pricing", href: "#" },
     { title: "Resources", href: "#" },
-
   ]
 
   return (

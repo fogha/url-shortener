@@ -6,3 +6,5 @@ export { default as NavBar } from './navBar';
 export { default as UrlShortenerSection } from './urlShortener';
 export { default as AdvancedStatistics } from './AdvancedStatistics';
 export { default as LandingSection } from './landingSection';
+export { default as Footer } from './Footer';
+export { default as Boost } from './BoostSection';
