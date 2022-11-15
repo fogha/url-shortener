@@ -28,6 +28,14 @@ const StyleContainer = styled.div`
     }
   }
 
+  .menuIcon {
+    display: none;
+    
+    @media (max-width: 868px) {
+     display: inline;
+    }
+  }
+
   .auth-buttons {
     .signUp-btn {
       margin-left: 10px;
@@ -37,8 +45,6 @@ const StyleContainer = styled.div`
      display: none;
     }
   }
-
-
 `;
 
 const NavBar: FC<{
@@ -67,9 +73,7 @@ const NavBar: FC<{
           </div>
         )}
       </div>
-      {(
-        <IconButton icon='menu' onClick={() => onClick()} />
-      )}
+      <IconButton className="menuIcon" icon='menu' onClick={() => onClick()} />
       {(
         <div className="auth-buttons">
           <LinkButton label="Login" onClick={() => console.log('Login')} link="#" />

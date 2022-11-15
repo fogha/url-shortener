@@ -18,10 +18,11 @@ const StyledButton = styled.button`
 
 const IconButton: FC<{
   icon: string,
+  className?: string,
   onClick: () => void,
-}> = ({ icon, onClick }) => {
+}> = ({ icon, onClick, className }) => {
   return (
-    <StyledButton onClick={onClick} data-testid="icon-button">
+    <StyledButton className={className} onClick={onClick} data-testid="icon-button">
       {icon === 'menu' && (
         <Menu color={theme.colors.grayish_violet} />
       )}

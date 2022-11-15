@@ -9,7 +9,7 @@ const StyleContainer = styled.div`
   height: 100%;
   margin-top: 150px;
 
-  .main-body {
+  .landing__left {
     width: 50%;
     height: 100%;
     padding-right: 50px;
@@ -33,10 +33,11 @@ const StyleContainer = styled.div`
     }
   }
 
-  .heroImg-wrapper {
+  .landing__ImgContainer {
     width: 50%;
+    height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
     position: absolute;
     right: -260px;
@@ -53,14 +54,14 @@ const StyleContainer = styled.div`
 const LandingSection = () => {
   const logo = require('../../assets/illustration-working.svg').default;
   return (
-    <StyleContainer className="hero-container">
-      <div className='main-body'>
+    <StyleContainer className="landing">
+      <div className='landing__left'>
         <h1 className='title'>More than just shorter links</h1>
         <p className='description'>Sunt velit ex ea irure magna velit esse nulla tempor excepteur eiusmod nostrud incididunt mollit.</p>
         <PrimaryButton label="Get Started" onClick={() => console.log('Sign up')} link="#" size='m' />
       </div>
-      <div className='heroImg-wrapper'>
-        <img src={logo} alt="hero-Img" className="hero-img" />
+      <div className='landing__ImgContainer'>
+        <img src={logo} alt="hero-Img" className="landing__img" />
       </div>
     </StyleContainer>
   )

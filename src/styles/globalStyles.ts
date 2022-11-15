@@ -54,18 +54,7 @@ export default createGlobalStyle`
           font-weight: 500;
         }
       }
-    
-      .heroImg-wrapper {
-        position: absolute;
-        right: -140px;
-        top: -430px;
-        bottom: 10px;
-    
-        .hero-img {
-          height: 300px;
-          width: auto;
-        }
-      }
+
     }
 
     .url-shortener-container {
