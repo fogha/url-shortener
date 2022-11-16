@@ -8,3 +8,4 @@ export { default as AdvancedStatistics } from './AdvancedStatistics';
 export { default as LandingSection } from './landingSection';
 export { default as Footer } from './Footer';
 export { default as Boost } from './BoostSection';
+export { default as MobileNav } from './mobileNav';

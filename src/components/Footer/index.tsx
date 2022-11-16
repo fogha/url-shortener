@@ -62,14 +62,17 @@ const Footer = () => {
   const logo: string = require('../../assets/logo.svg').default;
   const featureLinks = [
     {
+      id: "001",
       link: "Link Shortening",
       href: "###"
     },
     {
+      id: "002",
       link: "Branded Links",
       href: "###"
     },
     {
+      id: "003",
       link: "Analytics",
       href: "###"
     }
@@ -77,14 +80,17 @@ const Footer = () => {
 
   const resourceLinks = [
     {
+      id: "001",
       link: "Blogs",
       href: "###"
     },
     {
+      id: "002",
       link: "Developers",
       href: "###"
     },
     {
+      id: "003",
       link: "Support",
       href: "###"
     }
@@ -92,18 +98,22 @@ const Footer = () => {
 
   const companyLinks = [
     {
+      id: "001",
       link: "About",
       href: "###"
     },
     {
+      id: "002",
       link: "Our team",
       href: "###"
     },
     {
+      id: "003",
       link: "Careers",
       href: "###"
     },
     {
+      id: "004",
       link: "Contact",
       href: "###"
     }
@@ -118,19 +128,19 @@ const Footer = () => {
         <div className="wrappers">
           <span>Features</span>
           {featureLinks.map(link => (
-            <a href={link.href}>{link.link}</a>
+            <a key={link.id} href={link.href}>{link.link}</a>
           ))}
         </div>
         <div className="wrappers">
           <span>Resources</span>
           {resourceLinks.map(link => (
-            <a href={link.href}>{link.link}</a>
+            <a key={link.id} href={link.href}>{link.link}</a>
           ))}
         </div>
         <div className="wrappers">
           <span>Company</span>
           {companyLinks.map(link => (
-            <a href={link.link}>{link.link}</a>
+            <a key={link.id} href={link.link}>{link.link}</a>
           ))}
         </div>
       </div>

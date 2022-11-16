@@ -35,9 +35,15 @@ const StyleContainer = styled.div`
 
   .menuIcon {
     display: none;
+    transition: all 0.4s;
     
     @media (max-width: 868px) {
      display: inline;
+     cursor: pointer;
+    }
+
+    &:hover {
+      transform: scale(1.2);
     }
   }
 
@@ -72,7 +78,7 @@ const NavBar: FC<{
         {(
           <div className='linkContainer'>
             {links.map(link => (
-              <LinkButton label={link.title} onClick={() => console.log('Clicked', link.title)} link={link.href} />
+              <LinkButton key={link.title} label={link.title} onClick={() => console.log('Clicked', link.title)} link={link.href} />
             ))}
           </div>
         )}

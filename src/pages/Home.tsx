@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components'
-import { UrlShortenerSection, AdvancedStatistics, NavBar, LandingSection, Boost, Footer } from '../components';
+import { UrlShortenerSection, AdvancedStatistics, NavBar, LandingSection, Boost, Footer, MobileNav } from '../components';
 
 const HomeContainer = styled.div`
   width: 100%;
@@ -42,10 +42,12 @@ const HomeContainer = styled.div`
   }
 `;
 export default function Home() {
+  const [showModal, setShowModal] = useState<boolean>(false)
+
   return (
     <HomeContainer>
       <header className="header">
-        <NavBar onClick={() => { }} />
+        <NavBar onClick={() => setShowModal(true)} />
         <LandingSection />
       </header>
 
@@ -58,6 +60,7 @@ export default function Home() {
       <footer className="footer">
         <Footer />
       </footer>
+      <MobileNav showModal={showModal} hideModal={() => setShowModal(false)} />
     </HomeContainer>
   )
 }

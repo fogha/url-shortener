@@ -9,9 +9,11 @@ const StyleContainer = styled.div`
   margin-bottom: 100px;
   width: 100%;
 
-  @media (max-width: 768px) {
-    
+
+  .url-shortener-container {
+    margin-top: -80px;    
   }
+
 `;
 
 
