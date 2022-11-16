@@ -6,12 +6,11 @@ const StyledButton = styled.button<{
   copied?: boolean;
 }>`
   border: none;
-  width: ${({ size }) => size === 's' ? '110px' : '170px'};
+  width: 100%;
   height: ${({ size }) => size === 's' ? '40px' : '45px'};
   border-radius: ${({ size }) => size === 's' ? '4px' : '8px'};
   background-color: ${({ theme, copied }) => copied ? theme.colors.primary_dark_violet : theme.colors.primary_cyan};
-  margin: 10px 0;
-  margin-top: 0;
+  margin: 6pxpx 12px;
   
   :hover,
   :active {

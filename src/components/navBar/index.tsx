@@ -11,6 +11,10 @@ const StyleContainer = styled.div`
   display: flex;
   align-items: center;
 
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
   .navWrapper {
     display: flex;
     align-items: center;
@@ -18,12 +22,13 @@ const StyleContainer = styled.div`
 
     .logo {
       margin-right: 30px;
+      display: flex;
     }
   }
 
   .linkContainer {
     
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
      display: none;
     }
   }

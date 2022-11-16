@@ -6,13 +6,16 @@ import { LinkProps } from '../../utils/types';
 const StyleContainer = styled.div`
   background: ${({ theme }) => theme.colors.white};
   width: 100%;
-  height: 65px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px 0px;
-  padding: 0 20px;
+  padding: 12px 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
   .main-url {
     color: ${({ theme }) => theme.colors.dark_violet};
@@ -23,8 +26,23 @@ const StyleContainer = styled.div`
   .secondary-url {
     color: ${({ theme }) => theme.colors.primary_cyan};
     font-weight: 500;
-    margin-right: 20px;
-    flex: 1
+    flex: 1;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 8px 20px;
+    }
+  }
+
+  .shortenedLinkContainer {
+    width: 25%;
+    margin-left:12px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 0;
+    }
+
   }
 `;
 
@@ -45,8 +63,8 @@ const UrlCard: FC<{
   return (
     <StyleContainer className="urlCard-container">
       <div className="main-url">{link.original_link}</div>
-      <div className="section">
-        <span className="secondary-url">{link.full_short_link}</span>
+      <span className="secondary-url">{link.full_short_link}</span>
+      <div className='shortenedLinkContainer'>
         <SecondaryButton
           label={copied ? "Copied!" : "Copy"}
           onClick={() => copyToClipboard()}

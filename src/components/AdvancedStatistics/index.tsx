@@ -8,6 +8,11 @@ const StyleContainer = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 80px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      margin: 0;
+    }
 
     h1 {
       font-size: 42px;
@@ -15,14 +20,20 @@ const StyleContainer = styled.div`
       color: ${({ theme }) => theme.colors.dark_violet};
       font-family: ${({ theme }) => theme.font.primary};
       font-weight: 700;
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
     }
     p {
       color: ${({ theme }) => theme.colors.grayish_violet};
       font-family: ${({ theme }) => theme.font.primary};
       font-weight: 500;
-      width: 500px;
       text-align: center;
       font-size: 15px;
+
+      @media (max-width: 768px) {
+      }
     }
   }
 
@@ -30,11 +41,17 @@ const StyleContainer = styled.div`
     display: flex;
     width: 100%;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 120px 0;
+      align-items: center;
+    }
+
     .seperator {
       height: 8px;
       background: ${({ theme }) => theme.colors.primary_cyan};
       flex: 0.1;
-      margin-top: 120px
+      margin-top: 120px;
     }
 
     .card-1 {
@@ -42,11 +59,19 @@ const StyleContainer = styled.div`
     }
     .card-2 {
       flex: 1;
-      margin-top: 45px
+      margin-top: 45px;
+
+      @media (max-width: 768px) {
+        margin-top: 0;
+      }
     }
     .card-3 {
       flex: 1;
       margin-top: 80px;
+
+      @media (max-width: 768px) {
+        margin-top: 0;
+      }
     }
   }
 `;

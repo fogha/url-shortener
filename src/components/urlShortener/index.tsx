@@ -8,6 +8,10 @@ const StyleContainer = styled.div`
   margin-top: -75px;
   margin-bottom: 100px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    
+  }
 `;
 
 

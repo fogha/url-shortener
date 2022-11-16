@@ -12,27 +12,32 @@ const StyleContainer = styled.div<{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 150px;
   border-radius: 5px;
   display: flex;
   align-items: center;
-  padding: 0px 50px;
+  padding: 24px 50px;
   margin-bottom: 20px;
 
-  .Wrapper {
-    display: flex;
-    width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    paddin: 12px;
   }
 
   .form {
-    width: 100%;
-    margin-right: 20px;
+    width: 80%;
+    margin: 10px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 0;
+    }
 
     input {
       height: 45px;
       width: 100%;
       border: 2px solid ${({ theme, error }) => error ? theme.colors.secondary_red : theme.colors.white};
-      margin-right: 15px;
+      margin: 6px 0;
       border-radius: 5px;
       padding: 0px 20px;
       color: ${({ theme, error }) => error ? theme.colors.secondary_red : theme.colors.grayish_violet};
@@ -45,6 +50,13 @@ const StyleContainer = styled.div<{
     }
   }
 
+    .buttonContainer {
+      width: 20%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
   .error {
     margin: 0px;
     padding: 0px;
@@ -81,8 +93,7 @@ const ShortenUrlCard: FC<{
 
   return (
     <StyleContainer error={error} data-testid="shorten-url-form" className="shortenUrl-container">
-      <div className="Wrapper">
-        <div className="form">
+      <div className="form">
           <input
             value={error ? 'Shorten a link here...' : value}
             onChange={(e) => setValue(e.target.value)}
@@ -91,7 +102,8 @@ const ShortenUrlCard: FC<{
           />
           {error && (<span className="error">Please add a link</span>)}
           {urlError && (<span className="error">{urlError}</span>)}
-        </div>
+      </div>
+      <div className="buttonContainer">
         <SecondaryButton label="Shorten it!" onClick={() => submit()} loading={loading} />
       </div>
     </StyleContainer>

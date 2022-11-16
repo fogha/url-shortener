@@ -12,7 +12,11 @@ const HomeContainer = styled.div`
   .header {
     min-height: 100vh;  
     padding: 0 120px;
-    margin-bottom: 160px
+    margin-bottom: 160px;
+
+    @media (max-width: 768px) {
+      padding: 0 24px;
+    }
   }
 
   .main {
@@ -20,6 +24,10 @@ const HomeContainer = styled.div`
     padding: 0px 120px;
     padding-bottom: 100px;
     min-height: 85vh;
+
+    @media (max-width: 768px) {
+      padding: 0px 24px;
+    }
   }
 
   .footer {

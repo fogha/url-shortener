@@ -12,6 +12,11 @@ const StyleContainer = styled.div`
   position: relative;
   height: 260px;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
+
   h5 {
     font-size: 20px;
     color: ${({ theme }) => theme.colors.primary_dark_violet};
@@ -22,7 +27,7 @@ const StyleContainer = styled.div`
   p {
     color: ${({ theme }) => theme.colors.grayish_violet};
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
     padding: 0;
   }
@@ -39,8 +44,12 @@ const StyleContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-}
+
+    @media (max-width: 768px) {
+      margin: -60px auto 30px auto;
+    }
   }
+}
 `;
 
 const StatisticsCard: FC<{
