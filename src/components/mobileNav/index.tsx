@@ -10,16 +10,32 @@ import LinkButton from "../buttons/LinkButton";
 const StyleContainer = styled.div`
   padding: 20px 40px;
   border-radius: 12px;
+  transition: all 2s;
   display: none;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 
   @media (max-width: 768px) {
     display: block;
+  }
+
+  @keyframes fadeIn {
+    0%    { opacity: 0; }
+    20%   { opacity: 0.4; }
+    80%   { opacity: 0.8; }
+    100%  { opacity: 1; }
   }
 
   a {
     color: ${theme.colors.white};
     font-size: 16px;
     font-weight: 700;
+
+    &:hover {
+      color: ${theme.colors.white};      
+      opacity 0.7;
+    }
   }
 
   .mobile-navLinks,
@@ -94,7 +110,7 @@ const MobileNavModal: FC<{ showModal: boolean; hideModal: () => void }> = ({
       contentLabel="Example Modal"
       ariaHideApp={false}
     >
-      <StyleContainer data-testid="mobile-nav-modal">
+      <StyleContainer data-testid="mobileNav">
         <div className="mobile-navLinks">
           {links.map((link) => (
             <LinkButton

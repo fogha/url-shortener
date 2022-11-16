@@ -42,6 +42,11 @@ const StyleContainer = styled.div`
     width: 100%;
     position: relative;
 
+    & > div {
+      display: flex;
+      justify-content: center;
+    }
+
     @media (max-width: 768px) {
       flex-direction: column;
       padding: 120px 0;
@@ -139,16 +144,15 @@ const AdvancedStatistics = () => {
       <div className='statistics-body'>
         {
           cards.map((card, i) => (
-            <>
+            <div key={card.id}>
               <StatisticsCard
-                key={card.id}
                 className={card.class}
                 icon={card.icon}
                 title={card.title}
                 description={card.description}
               />
               {i !== 2 && <hr className={`separator separator-${i}`} />}
-            </>
+            </div>
           ))
         }
       </div>

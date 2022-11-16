@@ -2,21 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
 
 export default createGlobalStyle`
- .ReactModal__Overlay {
-    opacity: 0;
-    transition: opacity 500ms ease-in-out;
-  }
-
-  .ReactModal__Overlay--after-open{
-    opacity: 1;
-  }
-
-  .ReactModal__Overlay--before-close{
-    opacity: 0;
-    transition: opacity 500ms ease-in-out;
-  }
-
-
     .shortenUrl-container {
       background-image: url('../assets/bg-shorten-mobile.svg');
       border-radius: 10px;

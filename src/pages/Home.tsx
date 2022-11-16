@@ -45,7 +45,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState<boolean>(false)
 
   return (
-    <HomeContainer>
+    <HomeContainer data-testid="homePage">
       <header className="header">
         <NavBar onClick={() => setShowModal(true)} />
         <LandingSection />

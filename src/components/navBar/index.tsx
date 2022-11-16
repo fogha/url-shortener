@@ -37,7 +37,7 @@ const StyleContainer = styled.div`
     display: none;
     transition: all 0.4s;
     
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
      display: inline;
      cursor: pointer;
     }
@@ -52,7 +52,7 @@ const StyleContainer = styled.div`
       margin-left: 10px;
     }
 
-    @media (max-width: 868px) {
+    @media (max-width: 768px) {
      display: none;
     }
   }

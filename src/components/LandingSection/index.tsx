@@ -34,12 +34,12 @@ const StyleContainer = styled.div`
       padding: 0px;
 
       @media( max-width: 1200px) {
-        font-size: 48px;
+        font-size: 52px;
         margin-bottom: 12px;
       }
 
       @media( max-width: 768px) {
-        font-size: 42px;
+        font-size: 44px;
         margin-bottom: 12px;
       }
     }
@@ -91,7 +91,7 @@ const LandingSection = () => {
     <StyleContainer >
       <div className='landing__left'>
         <h1 className='title'>More than just shorter links</h1>
-        <p className='description'>Sunt velit ex ea irure magna velit esse nulla tempor excepteur eiusmod nostrud incididunt mollit.</p>
+        <p className='description'>Build your brand's recognition and get detailed insights on how your links are performing.</p>
         <PrimaryButton label="Get Started" onClick={() => console.log('Sign up')} link="#" size='m' />
       </div>
       <div className='landing__ImgContainer'>
