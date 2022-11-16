@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/home.scss'
 import styled from 'styled-components'
 import { UrlShortenerSection, AdvancedStatistics, NavBar, LandingSection, Boost, Footer } from '../components';
 
@@ -10,9 +9,12 @@ const HomeContainer = styled.div`
   flex-direction: column;
 
   .header {
-    min-height: 100vh;  
-    padding: 0 120px;
+    padding: 0 120px 280px 120px;
     margin-bottom: 160px;
+
+    @media (max-width: 1200px) {
+      padding-bottom: 120px;
+    }
 
     @media (max-width: 768px) {
       padding: 0 24px;

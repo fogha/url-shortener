@@ -14,7 +14,6 @@ const StyleContainer = styled.div<{
   background-size: cover;
   border-radius: 5px;
   display: flex;
-  align-items: center;
   padding: 24px 50px;
   margin-bottom: 20px;
 
@@ -22,6 +21,7 @@ const StyleContainer = styled.div<{
     flex-direction: column;
     justify-content: center;
     padding: 24px;
+    align-items: center;
   }
 
   .form {
@@ -52,6 +52,7 @@ const StyleContainer = styled.div<{
 
     .buttonContainer {
       width: 20%;
+      margin: 16px 0;
 
       @media (max-width: 768px) {
         width: 100%;
