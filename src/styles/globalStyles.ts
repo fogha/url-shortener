@@ -110,7 +110,7 @@ export default createGlobalStyle`
         flex-direction: column;
         align-items: center;
   
-        .seperator {
+        .separator {
           height: 60px;
           width: 8px;
           background: ${theme.colors.primary_cyan};

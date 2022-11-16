@@ -1,12 +1,11 @@
 import { FC } from 'react';
 import styled from 'styled-components'
-import { AiOutlineLineChart } from 'react-icons/ai';
-import { IoSpeedometerOutline } from 'react-icons/io5';
+import { IoBarChartOutline } from 'react-icons/io5';
+import { BsSpeedometer } from 'react-icons/bs';
 import { GiPencilBrush } from 'react-icons/gi';
 
 const StyleContainer = styled.div`
   background: ${({ theme }) => theme.colors.white};
-  width: 380px;
   border-radius: 5px;
   padding: 25px;
   position: relative;
@@ -60,10 +59,10 @@ const StatisticsCard: FC<{
 }> = ({ icon, title, description, className = '' }) => {
   const getIcon = () => {
     if (icon === 'chart') {
-      return <AiOutlineLineChart />
+      return <IoBarChartOutline />
     }
     if (icon === 'speed') {
-      return <IoSpeedometerOutline />
+      return <BsSpeedometer />
     }
     if (icon === 'brush') {
       return <GiPencilBrush />

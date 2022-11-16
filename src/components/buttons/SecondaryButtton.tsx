@@ -1,5 +1,6 @@
 import {FC} from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { CgSpinner } from 'react-icons/cg';
 
 const StyledButton = styled.button<{
   size: string;
@@ -23,11 +24,20 @@ const StyledButton = styled.button<{
   }
 
   .loading {
-    width: 20px;
     height: 20px;
     border-width: 2px;
     color: ${({ theme }) => theme.colors.white};
+    animation: rotation 1s infinite linear;
   }
+
+  @keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 `;
 
 const SecondaryButton: FC<{
@@ -41,7 +51,9 @@ const SecondaryButton: FC<{
   return (
     <StyledButton className={`secondary-btn-container ${className}`} onClick={onClick} size={size} copied={copied} disabled={copied}>
       {loading ? (
-        <div className="spinner-border loading" role="status"/>
+        <div className="loading" role="status">
+          <CgSpinner size={24} />
+        </div>
       ) : (
         <span className="label">{label}</span>
       )}

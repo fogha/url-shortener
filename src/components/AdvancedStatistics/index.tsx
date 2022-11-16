@@ -40,6 +40,7 @@ const StyleContainer = styled.div`
   .statistics-body {
     display: flex;
     width: 100%;
+    position: relative;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -47,30 +48,58 @@ const StyleContainer = styled.div`
       align-items: center;
     }
 
-    .seperator {
+    .separator {
       height: 8px;
       background: ${({ theme }) => theme.colors.primary_cyan};
       flex: 0.1;
       margin-top: 120px;
+      border: none;
+
+      @media (max-width: 768px) {
+        margin-top: 80px;
+        height: 8px;
+      }
     }
 
     .card-1 {
       flex: 1;
+      z-index: 10;
+
     }
     .card-2 {
       flex: 1;
       margin-top: 45px;
+      z-index: 10;
 
       @media (max-width: 768px) {
-        margin-top: 0;
+        margin: 80px 0;
       }
     }
     .card-3 {
       flex: 1;
       margin-top: 80px;
+      z-index: 10;
 
       @media (max-width: 768px) {
         margin-top: 0;
+      }
+    }
+
+    .separator-0 {
+      @media (max-width: 768px) {
+        position: absolute;
+        top: 20%;
+        width: 10px;
+        height: 180px;
+      }
+    }
+
+    .separator-1 {
+      @media (max-width: 768px) {
+        position: absolute;
+        top: 50%;
+        width: 10px;
+        height: 180px;
       }
     }
   }
@@ -118,7 +147,7 @@ const AdvancedStatistics = () => {
                 title={card.title}
                 description={card.description}
               />
-              {i !== 2 && <div className="seperator" />}
+              {i !== 2 && <hr className={`separator separator-${i}`} />}
             </>
           ))
         }
